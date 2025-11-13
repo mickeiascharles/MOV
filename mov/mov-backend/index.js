@@ -1,0 +1,30 @@
+import express from "express";
+import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+import rotasUsuarios from "./routes/usuarios.js";
+import rotasBueiros from "./routes/bueiros.js";
+import rotasManutencoes from "./routes/manutencoes.js";
+import rotasPerfil from "./routes/perfil.js";
+import rotasDashboard from "./routes/dashboard.js";
+
+const app = express();
+const PORT = 3001;
+
+app.use(cors());
+app.use(express.json());
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
+app.use("/api/usuarios", rotasUsuarios);
+app.use("/api/bueiros", rotasBueiros);
+app.use("/api/manutencoes", rotasManutencoes);
+app.use("/api/perfil", rotasPerfil);
+app.use("/api/dashboard", rotasDashboard);
+
+app.listen(PORT, () => {
+  console.log(`Servidor backend rodando em http://localhost:${PORT}`);
+});

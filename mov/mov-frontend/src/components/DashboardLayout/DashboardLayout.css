@@ -1,0 +1,17 @@
+.layout-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+
+  /* ESSA É A CORREÇÃO: Fundo branco para o dashboard, 
+     cobrindo o gradiente do index.css */
+  background-color: #ffffff;
+}
+
+.layout-content {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+  height: 100vh; /* Garante que o conteúdo possa rolar */
+}

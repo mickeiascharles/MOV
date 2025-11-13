@@ -1,0 +1,13 @@
+.grafico-historico-container {
+  /* O container do widget */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-wrapper {
+  /* O container do gráfico (precisa de altura) */
+  flex-grow: 1; /* Ocupa todo o espaço restante no card */
+  position: relative;
+  min-height: 250px; /* Altura mínima para o gráfico */
+}

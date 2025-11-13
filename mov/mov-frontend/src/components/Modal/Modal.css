@@ -1,0 +1,53 @@
+.modal-overlay {
+  position: fixed; /* Fica fixo sobre toda a tela */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo preto 50% transparente */
+
+  /* O "desfoque" do fundo que você pediu */
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Garante que fique na frente de tudo */
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+
+  /* Tamanho baseado no seu protótipo 4.jpg */
+  width: 90%;
+  max-width: 1200px;
+  height: 90vh; /* 90% da altura da tela */
+
+  /* Para o mapa caber 100% */
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}

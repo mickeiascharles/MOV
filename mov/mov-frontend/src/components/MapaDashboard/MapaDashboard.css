@@ -1,0 +1,42 @@
+.mapa-widget-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* Remove o padding padrão do widget-card */
+}
+
+.mapa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mapa-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.mapa-header button {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.mapa-leaflet-container {
+  flex-grow: 1; /* Ocupa o resto do espaço no card */
+  height: 300px; /* Altura base do mapa no dashboard */
+  border-radius: 0 0 8px 8px; /* Arredonda cantos inferiores */
+}
+
+/* Garante que o CSS do leaflet funcione bem */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}

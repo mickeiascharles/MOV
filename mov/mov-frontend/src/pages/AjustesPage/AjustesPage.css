@@ -1,0 +1,30 @@
+.perfil-foto-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.perfil-foto {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f0f0f0;
+}
+
+.btn-foto {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* ... (cole isso no final do seu AjustesPage.css) ... */
+
+/* Esconde o input de arquivo real */
+.input-foto-escondido {
+  display: none;
+}

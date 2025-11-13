@@ -1,0 +1,88 @@
+.sidebar-container {
+  width: 250px;
+  min-width: 250px;
+  height: 100vh;
+  background-color: #f4f4f4;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar-logo {
+  width: 120px;
+  margin: 10px 0 30px 10px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Empurra o footer para baixo */
+}
+
+.nav-link {
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: #555;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: #e9e9e9;
+}
+
+/* O NavLink adiciona a classe 'active' automaticamente.
+   Esta regra cuida da FUNCIONALIDADE 2 (página ativa)
+*/
+.nav-link.active {
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: 600;
+}
+
+/* --- ESTILOS NOVOS (para AÇÃO 30) --- */
+
+.sidebar-footer {
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  color: #555;
+  font-size: 14px;
+
+  /* Layout para o nome e o botão */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-username {
+  font-weight: 600;
+  /* Caso o nome seja muito longo */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-logout {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  color: #333;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-logout:hover {
+  background-color: #d32f2f; /* Vermelho ao passar o mouse */
+  border-color: #d32f2f;
+  color: white;
+}
+/* --- FIM DOS ESTILOS NOVOS --- */

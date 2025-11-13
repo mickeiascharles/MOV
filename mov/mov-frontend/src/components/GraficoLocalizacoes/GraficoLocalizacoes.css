@@ -1,0 +1,13 @@
+.grafico-localizacoes-container {
+  /* O container do widget */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-wrapper-localizacoes {
+  /* O container do gráfico (precisa de altura) */
+  flex-grow: 1;
+  position: relative;
+  min-height: 250px; /* Mesma altura do gráfico ao lado */
+}

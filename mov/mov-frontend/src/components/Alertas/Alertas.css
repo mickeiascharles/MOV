@@ -1,0 +1,49 @@
+.alertas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Espaço entre os alertas */
+}
+
+.alerta-card {
+  padding: 16px;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.alerta-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Cores baseadas no protótipo */
+.alerta-card.nao-autorizada {
+  background-color: #d32f2f; /* Vermelho */
+}
+
+.alerta-card.autorizada {
+  background-color: #ff7f00; /* Laranja */
+}
+
+.alerta-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.alerta-body {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.alertas-loading {
+  padding: 20px;
+  text-align: center;
+  color: #555;
+}

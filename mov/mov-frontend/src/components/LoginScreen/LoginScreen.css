@@ -1,0 +1,154 @@
+/* src/components/LoginScreen/LoginScreen.css */
+
+/* 1. NOVO WRAPPER DE CENTRALIZAÇÃO */
+.login-page-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Impede o card de colar nas bordas em telas pequenas */
+
+  /* O gradiente do body (index.css) vai aparecer aqui */
+}
+
+/* 2. O CARD PRINCIPAL */
+.login-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  max-width: 1100px; /* Aumentado de 1200 para 1100 */
+  width: 100%; /* Ocupa 100% do wrapper (até o max-width) */
+  min-height: 600px;
+}
+
+/* 3. PROPORÇÃO FORÇADA 35% */
+.map-placeholder {
+  width: 35%;
+  background-image: url("../../assets/map-placeholder.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-right: 1px solid #f0f0f0; /* Linha sutil de divisão */
+}
+
+/* 4. PROPORÇÃO FORÇADA 65% */
+.login-card {
+  width: 65%;
+  padding: 40px 60px; /* Padding ajustado */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 5. CORREÇÕES DE ESTILO (tamanhos, cores) */
+.map-placeholder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.map-logo-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 100px; /* Tamanho corrigido */
+  z-index: 2;
+}
+
+.mov-logo {
+  width: 130px; /* Tamanho corrigido */
+  margin-bottom: 25px;
+}
+
+.login-card h2 {
+  font-size: 24px; /* Tamanho corrigido */
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; /* Largura dos inputs */
+}
+
+.login-card input {
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f4f4f4;
+  outline: none;
+  transition: box-shadow 0.2s, background-color 0.2s;
+}
+
+/* Corrigindo o placeholder claro */
+.login-card input::placeholder {
+  color: #999;
+}
+
+.login-card input:focus {
+  box-shadow: 0 0 0 2px #ff7f00;
+  background-color: #fff;
+}
+
+.login-card button {
+  background-color: #ff7f00;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px; /* Tamanho corrigido */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* 6. ESTILO DA MENSAGEM DE ERRO */
+.login-error-message {
+  color: #d32f2f; /* Vermelho escuro */
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+/* 7. RESPONSIVIDADE (Ajustada) */
+@media (max-width: 768px) {
+  /* No mobile, o wrapper não centraliza mais */
+  .login-page-wrapper {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .login-container {
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh; /* Ocupa a tela toda */
+    border-radius: 0;
+  }
+
+  .map-placeholder {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .login-card {
+    width: 100%;
+    padding: 40px 30px;
+    flex-grow: 1; /* Ocupa o resto do espaço */
+  }
+}
