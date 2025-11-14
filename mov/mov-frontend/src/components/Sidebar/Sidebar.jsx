@@ -44,14 +44,7 @@ function Sidebar() {
           Gestão de Eventos 
         </NavLink>
 
-        {/* 6. LÓGICA DE PERMISSÃO (Gestão de Usuários)
-          Só aparece se for Admin OU SuperAdmin
-        */}
-        {(isAdmin || isSuperAdmin) && (
-          <NavLink to="/gestao-usuarios" className="nav-link">
-            Gestão de Usuários
-          </NavLink>
-        )}
+        
 
         {/* 7. LÓGICA DE PERMISSÃO (Gestão de Manutenções)
           Aparece para Admin, SuperAdmin E GestorManutencao
@@ -68,6 +61,15 @@ function Sidebar() {
         {(isAdmin || isSuperAdmin || isGestorBueiros) && (
           <NavLink to="/gestao-bueiros" className="nav-link">
             Gestão de Bueiros
+          </NavLink>
+        )}
+
+        {/* 6. LÓGICA DE PERMISSÃO (Gestão de Usuários)
+          Só aparece se for Admin OU SuperAdmin
+        */}
+        {(isAdmin || isSuperAdmin) && (
+          <NavLink to="/gestao-usuarios" className="nav-link">
+            Gestão de Usuários
           </NavLink>
         )}
 

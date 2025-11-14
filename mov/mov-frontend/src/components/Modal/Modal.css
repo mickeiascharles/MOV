@@ -18,7 +18,7 @@
 .modal-content {
   background-color: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 0;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   position: relative;
 
@@ -30,13 +30,33 @@
   /* Para o mapa caber 100% */
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Ajuste específico para modal de cadastro de bueiro */
+.modal-content:has(.modal-cadastro-bueiro) {
+  width: auto;
+  max-width: 90vw;
+  height: auto;
+  max-height: 90vh;
+  display: inline-flex;
+}
+
+/* Ajuste específico para modal de detalhes do bueiro */
+.modal-content:has(.bueiro-detalhes-modal) {
+  width: auto;
+  max-width: 90vw;
+  height: auto;
+  max-height: 90vh;
+  display: inline-flex;
 }
 
 .modal-close-button {
   position: absolute;
-  top: -15px;
-  right: -15px;
-  background-color: #333;
+  top: 10px; /* Mudado de -15px para 10px para não ser cortado */
+  right: 10px; /* Mudado de -15px para 10px para não ser cortado */
+  background-color: #ff7f00;
   color: white;
   border: none;
   border-radius: 50%;
@@ -50,4 +70,5 @@
   justify-content: center;
   align-items: center;
   line-height: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
