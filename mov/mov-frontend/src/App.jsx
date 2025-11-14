@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import GestaoUsuariosPage from "./pages/GestaoUsuariosPage/GestaoUsuariosPage";
 import GestaoManutencoesPage from "./pages/GestaoManutencoesPage/GestaoManutencoesPage";
 import GestaoBueirosPage from "./pages/GestaoBueirosPage/GestaoBueirosPage";
+import GestaoEventosPage from "./pages/GestaoEventosPage/GestaoEventosPage";
 
 import AjustesPage from "./pages/AjustesPage/AjustesPage";
 
@@ -19,6 +20,8 @@ function App() {
       <Route element={<ProtectedRoute />}>
         <Route path="/" element={<DashboardLayout />}>
           <Route index element={<HomePage />} />
+
+          <Route path="eventos" element={<GestaoEventosPage />} />
 
           <Route
             path="gestao-usuarios"

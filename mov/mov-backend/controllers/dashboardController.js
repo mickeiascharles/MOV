@@ -54,6 +54,54 @@ export const getTabelaEventos = async (req, res) => {
   }
 };
 
+export const getAllEventos = async (req, res) => {
+  try {
+    await seedEventosSeVazio();
+    const query = `
+      SELECT 
+        e.id, 
+        b.codigo AS local, 
+        b.latitude,
+        b.longitude,
+        IF(e.tipo = 'NaoAutorizada', 'Violação', 'Manutenção agendada') AS categoria,
+        DATE_FORMAT(e.timestamp, '%Y-%m-%d %H:%i:%s') AS dataFormatada,
+        DATE_FORMAT(e.timestamp, '%d/%m/%Y %H:%i:%s') AS data,
+        e.timestamp AS timestampRaw,
+        IF(e.tipo = 'NaoAutorizada', 'Abertura Incorreta', 'Abertura Prevista') AS status,
+        IF(e.tipo = 'NaoAutorizada', 'incorreta', 'prevista') AS statusType,
+        e.tipo AS tipo,
+        CASE 
+          WHEN e.tipo = 'NaoAutorizada' THEN 
+            CASE 
+              WHEN TIMESTAMPDIFF(HOUR, e.timestamp, NOW()) <= 1 THEN 'Alta'
+              WHEN TIMESTAMPDIFF(HOUR, e.timestamp, NOW()) <= 24 THEN 'Média'
+              ELSE 'Baixa'
+            END
+          ELSE 'Baixa'
+        END AS prioridade,
+        CASE 
+          WHEN e.tipo = 'NaoAutorizada' AND TIMESTAMPDIFF(HOUR, e.timestamp, NOW()) <= 24 THEN 'Aberto'
+          WHEN e.tipo = 'NaoAutorizada' AND TIMESTAMPDIFF(HOUR, e.timestamp, NOW()) > 24 AND TIMESTAMPDIFF(HOUR, e.timestamp, NOW()) <= 48 THEN 'Em Atendimento'
+          ELSE 'Fechado'
+        END AS statusAtendimento,
+        CASE 
+          WHEN e.tipo = 'NaoAutorizada' THEN 'Abertura não autorizada detectada'
+          ELSE 'Manutenção agendada realizada'
+        END AS descricao
+      FROM eventos AS e
+      JOIN bueiros AS b ON e.bueiro_id = b.id
+      ORDER BY e.timestamp DESC
+    `;
+    const [rows] = await pool.query(query);
+    res.status(200).json({ data: rows });
+  } catch (error) {
+    console.error(error);
+    res
+      .status(500)
+      .json({ message: "Erro no servidor ao buscar eventos." });
+  }
+};
+
 export const getHistoricoGrafico = async (req, res) => {
   try {
     await seedEventosSeVazio(); // Garante dados para teste

@@ -37,7 +37,11 @@ function Sidebar() {
           'end' no primeiro link garante que ele só fique ativo na home ('/')
         */}
         <NavLink to="/" className="nav-link" end>
-          Interface
+          Dashboard
+        </NavLink>
+
+        <NavLink to="/eventos" className="nav-link">
+          Gestão de Eventos 
         </NavLink>
 
         {/* 6. LÓGICA DE PERMISSÃO (Gestão de Usuários)

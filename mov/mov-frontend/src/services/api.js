@@ -161,3 +161,13 @@ export const getGraficoLocalizacoes = async () => {
     return { ok: false, error: message };
   }
 };
+
+export const getAllEventos = async () => {
+  try {
+    const response = await api.get("/dashboard/eventos");
+    return { ok: true, data: response.data.data };
+  } catch (error) {
+    const message = error.response?.data?.message || "Erro de rede";
+    return { ok: false, error: message };
+  }
+};
