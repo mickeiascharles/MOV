@@ -3,7 +3,7 @@ import "./GestaoBueirosPage.css";
 
 import "../GestaoUsuariosPage/GestaoUsuariosPage.css";
 
-import { getBueiros, cadastrarBueiro } from "../../services/api";
+import { getBueiros, cadastrarBueiro, excluirBueiro } from "../../services/api";
 
 function GestaoBueirosPage() {
   const [bueiros, setBueiros] = useState([]);
@@ -50,6 +50,22 @@ function GestaoBueirosPage() {
       carregarBueiros();
     } else {
       setErroForm("Erro ao cadastrar bueiro.");
+    }
+  };
+
+  const handleExcluirBueiro = async (bueiroId) => {
+    if (
+      window.confirm(
+        "Tem certeza que deseja excluir este bueiro? Todos os eventos relacionados também serão excluídos."
+      )
+    ) {
+      const response = await excluirBueiro(bueiroId);
+      if (response.ok) {
+        alert("Bueiro excluído com sucesso!");
+        carregarBueiros();
+      } else {
+        alert(response.error || "Erro ao excluir bueiro.");
+      }
     }
   };
 
@@ -111,6 +127,7 @@ function GestaoBueirosPage() {
                 <th>Latitude</th>
                 <th>Longitude</th>
                 <th>Status</th>
+                <th>Ações</th>
               </tr>
             </thead>
             <tbody>
@@ -120,6 +137,14 @@ function GestaoBueirosPage() {
                   <td>{item.latitude}</td>
                   <td>{item.longitude}</td>
                   <td>{item.status}</td>
+                  <td>
+                    <button
+                      className="btn-excluir"
+                      onClick={() => handleExcluirBueiro(item.id)}
+                    >
+                      Excluir
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>

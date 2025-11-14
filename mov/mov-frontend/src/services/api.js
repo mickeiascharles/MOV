@@ -74,6 +74,15 @@ export const cadastrarBueiro = async (dadosBueiro) => {
     return { ok: false, error: message };
   }
 };
+export const excluirBueiro = async (bueiroId) => {
+  try {
+    const response = await api.delete(`/bueiros/${bueiroId}`);
+    return { ok: true, data: response.data };
+  } catch (error) {
+    const message = error.response?.data?.message || "Erro de rede";
+    return { ok: false, error: message };
+  }
+};
 export const getManutencoes = async () => {
   try {
     const response = await api.get("/manutencoes");

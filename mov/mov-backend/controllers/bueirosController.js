@@ -40,3 +40,29 @@ export const cadastrarBueiro = async (req, res) => {
     res.status(500).json({ message: "Erro no servidor ao cadastrar bueiro." });
   }
 };
+
+export const excluirBueiro = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // Verifica se o bueiro existe
+    const [bueiros] = await pool.query("SELECT id FROM bueiros WHERE id = ?", [
+      id,
+    ]);
+
+    if (bueiros.length === 0) {
+      return res.status(404).json({ message: "Bueiro não encontrado." });
+    }
+
+    // Deleta os eventos relacionados primeiro (para evitar problemas de foreign key)
+    await pool.query("DELETE FROM eventos WHERE bueiro_id = ?", [id]);
+
+    // Deleta o bueiro
+    await pool.query("DELETE FROM bueiros WHERE id = ?", [id]);
+
+    res.status(200).json({ message: "Bueiro excluído com sucesso." });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Erro no servidor ao excluir bueiro." });
+  }
+};
