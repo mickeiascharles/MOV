@@ -2,7 +2,7 @@
   width: 250px;
   min-width: 250px;
   height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #f4710675;
   border-right: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
@@ -24,23 +24,23 @@
   padding: 12px 15px;
   margin-bottom: 8px;
   text-decoration: none;
-  color: #555;
+  color: #013056;
   border-radius: 6px;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
   transition: background-color 0.2s;
 }
 
 .nav-link:hover {
-  background-color: #e9e9e9;
+  background-color: #ff6907;
 }
 
 /* O NavLink adiciona a classe 'active' automaticamente.
    Esta regra cuida da FUNCIONALIDADE 2 (página ativa)
 */
 .nav-link.active {
-  background-color: #e0e0e0;
-  color: #333;
+  background-color: #013056;
+  color: #ff6907;
   font-weight: 600;
 }
 
