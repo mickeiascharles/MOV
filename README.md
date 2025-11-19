@@ -1,5 +1,5 @@
 <div align="center">
-    <img height="150cm" src="/src/assets/mov-logo.png" alt="MOV - Logo Oficial"/>
+    <img height="150cm" src="/mov-frontend/src/assets/mov-logo.png" alt="MOV - Logo Oficial"/>
 </div>
 
 <br>
