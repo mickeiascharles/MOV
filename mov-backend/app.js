@@ -25,6 +25,10 @@ app.use("/api/perfil", rotasPerfil);
 app.use("/api/dashboard", rotasDashboard);
 
 app.get("/api", (req, res) => {
+  res.send("Servidor MOV OK. Acesse a API em /api");
+});
+
+app.get("/api", (req, res) => {
   res.json({ message: "Servidor MOV Backend está no ar!" });
 });
 
