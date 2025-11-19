@@ -1,0 +1,11 @@
+.mapa-modal-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mapa-modal-leaflet-container {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,263 @@
+.gestao-eventos-container {
+  padding: 32px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.eventos-header {
+  margin-bottom: 32px;
+}
+
+.header-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.header-icon {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.header-text h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.header-text p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.filtros-section {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 48px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: white;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #ff7f00;
+}
+
+.filtros-dropdowns {
+  display: flex;
+  gap: 12px;
+}
+
+.filtro-select {
+  padding: 12px 40px 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: white;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 9L1 4h10z' fill='%23666'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  transition: border-color 0.2s;
+}
+
+.filtro-select:focus {
+  outline: none;
+  border-color: #ff7f00;
+}
+
+.eventos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.evento-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-left: 4px solid;
+  transition: box-shadow 0.2s;
+}
+
+.evento-card:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.evento-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.evento-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.evento-localizacao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.icon-pin {
+  flex-shrink: 0;
+}
+
+.local-text {
+  color: #333;
+}
+
+.evento-coordenadas {
+  font-size: 14px;
+  color: #666;
+  font-family: "Courier New", monospace;
+  margin-top: 4px;
+}
+
+.evento-descricao {
+  font-size: 15px;
+  color: #555;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.evento-timestamp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.icon-clock {
+  flex-shrink: 0;
+}
+
+.evento-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.chip {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.chip-alta {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.chip-media {
+  background-color: #fff3e0;
+  color: #ff7f00;
+}
+
+.chip-baixa {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.chip-aberto {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.chip-atendimento {
+  background-color: #fff3e0;
+  color: #ff7f00;
+}
+
+.chip-fechado {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.loading-message,
+.empty-message {
+  text-align: center;
+  padding: 48px;
+  color: #666;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .gestao-eventos-container {
+    padding: 20px;
+  }
+
+  .filtros-section {
+    flex-direction: column;
+  }
+
+  .search-container {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .filtros-dropdowns {
+    width: 100%;
+  }
+
+  .filtro-select {
+    flex: 1;
+  }
+
+  .evento-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .evento-chips {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .chip {
+    flex: 1;
+  }
+}

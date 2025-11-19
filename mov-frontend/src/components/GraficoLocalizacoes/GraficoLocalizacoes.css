@@ -1,0 +1,11 @@
+.grafico-localizacoes-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-wrapper-localizacoes {
+  flex-grow: 1;
+  position: relative;
+  min-height: 250px;
+}

@@ -1,0 +1,42 @@
+.alerta-modal-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.alerta-modal-container.tipo-nao-autorizada {
+  border: 4px solid #d32f2f;
+}
+.alerta-modal-container.tipo-nao-autorizada .alerta-detalhes-wrapper h3 {
+  color: #d32f2f;
+}
+
+.alerta-modal-container.tipo-autorizada {
+  border: 4px solid #ff7f00;
+}
+.alerta-modal-container.tipo-autorizada .alerta-detalhes-wrapper h3 {
+  color: #ff7f00;
+}
+
+.alerta-mapa-wrapper {
+  flex: 2;
+}
+
+.alerta-mapa-leaflet {
+  width: 100%;
+  height: 100%;
+}
+
+.alerta-detalhes-wrapper {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.alerta-detalhes-wrapper h3 {
+  margin-top: 0;
+}

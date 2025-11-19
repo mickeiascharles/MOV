@@ -1,0 +1,376 @@
+.gestao-bueiros-page {
+  padding: 24px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.gestao-bueiros-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-text h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+
+.header-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.btn-cadastrar-bueiro {
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-cadastrar-bueiro:hover {
+  background-color: #e67300;
+}
+
+.mapa-section {
+  margin-bottom: 32px;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mapa-header-section {
+  margin-bottom: 16px;
+}
+
+.mapa-header-section h2 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.mapa-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.mapa-container-card {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 500px;
+  border: 1px solid #e0e0e0;
+}
+
+.bueiros-map {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.loading-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #666;
+  font-size: 16px;
+}
+
+.bueiros-cards-section {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.bueiros-cards-section h2 {
+  margin: 0 0 24px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.bueiros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.bueiro-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.bueiro-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bueiro-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.bueiro-id {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-ativo {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-atencao {
+  background-color: #ff9800;
+  color: white;
+}
+
+.status-offline {
+  background-color: #f44336;
+  color: white;
+}
+
+.bueiro-card-body {
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+
+.bueiro-info-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.bueiro-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.info-value {
+  font-size: 14px;
+  color: #333;
+}
+
+.bueiro-card-footer {
+  display: flex;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.btn-ver-detalhes {
+  flex: 1;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-detalhes:hover {
+  background-color: #1976d2;
+}
+
+.btn-excluir-card {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-excluir-card:hover {
+  background-color: #d32f2f;
+}
+
+.loading-cards {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 16px;
+}
+
+.no-bueiros {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 16px;
+}
+
+.modal-cadastro-bueiro {
+  padding: 24px;
+  padding-top: 50px;
+  width: 100%;
+  min-width: 400px;
+  max-width: 500px;
+  margin: 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+.modal-cadastro-bueiro h2 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-cadastro-bueiro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-cadastro-bueiro .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-cadastro-bueiro .form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-cadastro-bueiro .form-group input {
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.form-cadastro-bueiro .form-group input:focus {
+  outline: none;
+  border-color: #ff7f00;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.btn-cancelar {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cancelar:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-salvar {
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-salvar:hover {
+  background-color: #e67300;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .gestao-bueiros-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .btn-cadastrar-bueiro {
+    width: 100%;
+  }
+
+  .bueiros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mapa-container-card {
+    height: 400px;
+  }
+}
+
+.leaflet-container {
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  margin: 12px 16px;
+  font-size: 14px;
+}

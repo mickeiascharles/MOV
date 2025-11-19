@@ -1,0 +1,52 @@
+.homepage-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  grid-template-rows: auto auto 1fr;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+}
+
+.widget-historico {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.widget-alertas {
+  grid-column: 3 / 4;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.widget-mapa {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
+.widget-localizacoes {
+  grid-column: 2 / 4;
+  grid-row: 2;
+}
+
+.widget-tabela {
+  grid-column: 1 / 4;
+  grid-row: 3;
+}
+
+.widget-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.widget-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}

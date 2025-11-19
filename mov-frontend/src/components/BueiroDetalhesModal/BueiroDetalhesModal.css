@@ -1,0 +1,279 @@
+.bueiro-detalhes-modal {
+  background-color: #f5f5f5;
+  padding: 24px;
+  width: 100%;
+  min-width: 600px;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border-radius: 8px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.modal-content:has(.bueiro-detalhes-modal) > .modal-close-button {
+  display: none !important;
+}
+
+.bueiro-detalhes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  padding-right: 48px;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.bueiro-codigo {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+
+.bueiro-endereco {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.btn-close-modal {
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+}
+
+.btn-close-modal:hover {
+  background-color: #e67300;
+}
+
+.detalhes-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.detalhes-card:last-child {
+  margin-bottom: 0;
+}
+
+.card-title {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-title-icon {
+  color: #666;
+}
+
+.status-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-badge-container {
+  display: flex;
+  align-items: center;
+}
+
+.status-badge-large {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge-large.status-ativo {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-badge-large.status-atencao {
+  background-color: #ff9800;
+  color: white;
+}
+
+.status-badge-large.status-offline {
+  background-color: #f44336;
+  color: white;
+}
+
+.status-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.status-update-info {
+  font-size: 14px;
+  color: #666;
+}
+
+.info-card-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.info-value {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.info-icon {
+  width: 16px;
+  height: 16px;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.eventos-loading,
+.eventos-empty {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  color: #666;
+  font-size: 14px;
+  justify-content: center;
+}
+
+.empty-icon {
+  width: 24px;
+  height: 24px;
+  color: #999;
+}
+
+.eventos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.evento-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border-left: 4px solid #e0e0e0;
+}
+
+.evento-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.evento-tipo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.evento-data {
+  font-size: 12px;
+  color: #666;
+}
+
+.evento-status {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.evento-status.incorreta {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.evento-status.prevista {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+@media (max-width: 768px) {
+  .bueiro-detalhes-modal {
+    padding: 20px;
+  }
+
+  .info-card-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .status-card-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .evento-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

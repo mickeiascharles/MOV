@@ -1,0 +1,141 @@
+.login-page-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  max-width: 1100px;
+  width: 100%;
+  min-height: 600px;
+}
+
+.map-placeholder {
+  width: 35%;
+  background-image: url("../../assets/map-placeholder.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-right: 1px solid #f0f0f0;
+}
+
+.login-card {
+  width: 65%;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.map-placeholder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.map-logo-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 100px;
+  z-index: 2;
+}
+
+.mov-logo {
+  width: 130px;
+  margin-bottom: 25px;
+}
+
+.login-card h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card input {
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f4f4f4;
+  outline: none;
+  transition: box-shadow 0.2s, background-color 0.2s;
+}
+
+.login-card input::placeholder {
+  color: #999;
+}
+
+.login-card input:focus {
+  box-shadow: 0 0 0 2px #ff7f00;
+  background-color: #fff;
+}
+
+.login-card button {
+  background-color: #ff7f00;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-error-message {
+  color: #d32f2f;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .login-page-wrapper {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .login-container {
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+
+  .map-placeholder {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .login-card {
+    width: 100%;
+    padding: 40px 30px;
+    flex-grow: 1;
+  }
+}

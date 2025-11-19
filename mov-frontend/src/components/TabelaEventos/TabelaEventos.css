@@ -1,0 +1,45 @@
+.tabela-widget-container {
+  overflow: hidden;
+}
+
+.tabela-eventos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.tabela-eventos th,
+.tabela-eventos td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+.tabela-eventos th {
+  font-size: 12px;
+  font-weight: 600;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.tabela-eventos td {
+  color: #333;
+}
+
+.status-chip {
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.status-chip.status-prevista {
+  background-color: #fff3e0;
+  color: #ff7f00;
+}
+
+.status-chip.status-incorreta {
+  background-color: #ffebee;
+  color: #d32f2f;
+}

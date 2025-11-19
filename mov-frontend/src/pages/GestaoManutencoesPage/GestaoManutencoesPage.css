@@ -1,0 +1,8 @@
+.form-group-inline {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group-inline .form-group {
+  flex: 1;
+}
