@@ -5,6 +5,10 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const allowedOrigins = [
+  "https://mickeiascharles.github.io",
+  "https://mov-backend-ex6e.onrender.com",
+];
 
 import rotasUsuarios from "./routes/usuarios.js";
 import rotasBueiros from "./routes/bueiros.js";
@@ -31,5 +35,11 @@ app.use("/api/dashboard", rotasDashboard);
 app.get("/api", (req, res) => {
   res.json({ message: "Servidor MOV Backend está no ar!" });
 });
+
+const corsOptions = {
+  origin: allowedOrigins,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
 
 export default app;
