@@ -1,99 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-11-19T17:40:28.208315" rpa="false" schemaversion="5">
-<suite id="s1" name="Mov System" source="C:\Users\user\Desktop\mov\tests\mov_system.robot">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-11-21T09:51:58.204214" rpa="false" schemaversion="5">
+<suite id="s1" name="Mov System" source="C:\Users\user\Desktop\Faculdade\Terceiro Semestre\Residencia 3\Entrega Final\mov\tests\mov_system.robot">
 <test id="s1-t1" name="Cenario: Login com Sucesso e Verificacao do Dashboard" line="10">
 <kw name="Abrir Navegador">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-19T17:40:28.435666" level="INFO">Opening browser 'chrome' to base url 'http://localhost:5173/login'.</msg>
+<msg time="2025-11-21T09:51:58.458087" level="INFO">Opening browser 'chrome' to base url 'http://localhost:5173/login'.</msg>
 <arg>${URL}/login</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-19T17:40:28.435521" elapsed="1.981271"/>
+<status status="PASS" start="2025-11-21T09:51:58.457931" elapsed="1.493369"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-11-19T17:40:30.416975" elapsed="0.647763"/>
+<status status="PASS" start="2025-11-21T09:51:59.951570" elapsed="0.540308"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-11-19T17:40:31.064866" elapsed="0.000199"/>
+<status status="PASS" start="2025-11-21T09:52:00.492010" elapsed="0.000184"/>
 </kw>
-<status status="PASS" start="2025-11-19T17:40:28.435150" elapsed="2.629966"/>
+<status status="PASS" start="2025-11-21T09:51:58.457545" elapsed="2.034700"/>
 </kw>
 <kw name="Fazer Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Login</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-19T17:40:31.065444" elapsed="0.507552"/>
+<status status="PASS" start="2025-11-21T09:52:00.492972" elapsed="0.507625"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-19T17:40:31.573409" level="INFO">Typing text 'admin@mov.com' into text field 'xpath=//input[@type='email']'.</msg>
+<msg time="2025-11-21T09:52:01.000962" level="INFO">Typing text 'admin@mov.com' into text field 'xpath=//input[@type='email']'.</msg>
 <arg>xpath=//input[@type='email']</arg>
 <arg>admin@mov.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-19T17:40:31.573164" elapsed="1.584527"/>
+<status status="PASS" start="2025-11-21T09:52:01.000733" elapsed="1.559184"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-19T17:40:33.157975" level="INFO">Typing text '123' into text field 'xpath=//input[@type='password']'.</msg>
+<msg time="2025-11-21T09:52:02.560199" level="INFO">Typing text '123' into text field 'xpath=//input[@type='password']'.</msg>
 <arg>xpath=//input[@type='password']</arg>
 <arg>123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-19T17:40:33.157832" elapsed="1.540080"/>
+<status status="PASS" start="2025-11-21T09:52:02.560061" elapsed="1.541358"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-11-19T17:40:34.698203" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<msg time="2025-11-21T09:52:04.101721" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
 <arg>xpath=//button[@type='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-19T17:40:34.698056" elapsed="2.600803"/>
+<status status="PASS" start="2025-11-21T09:52:04.101575" elapsed="2.540434"/>
 </kw>
-<status status="PASS" start="2025-11-19T17:40:31.065301" elapsed="6.233653"/>
+<status status="PASS" start="2025-11-21T09:52:00.492761" elapsed="6.149348"/>
 </kw>
 <kw name="Verificar Carregamento do Dashboard">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Histórico de Eventos</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-19T17:40:37.299327" elapsed="0.507821"/>
+<status status="PASS" start="2025-11-21T09:52:06.642506" elapsed="0.506967"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-11-19T17:40:38.816277" level="INFO">Current page contains text 'Localizações com Eventos'.</msg>
+<msg time="2025-11-21T09:52:08.168097" level="INFO">Current page contains text 'Localizações com Eventos'.</msg>
 <arg>Localizações com Eventos</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-11-19T17:40:37.807300" elapsed="1.009068"/>
+<status status="PASS" start="2025-11-21T09:52:07.149628" elapsed="1.018560"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-11-19T17:40:39.825145" level="INFO">Current page contains text 'Detalhamento de Eventos'.</msg>
+<msg time="2025-11-21T09:52:09.175158" level="INFO">Current page contains text 'Detalhamento de Eventos'.</msg>
 <arg>Detalhamento de Eventos</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-11-19T17:40:38.816491" elapsed="1.008741"/>
+<status status="PASS" start="2025-11-21T09:52:08.168298" elapsed="1.006987"/>
 </kw>
-<status status="PASS" start="2025-11-19T17:40:37.299166" elapsed="2.526137"/>
+<status status="PASS" start="2025-11-21T09:52:06.642335" elapsed="2.533026"/>
 </kw>
 <kw name="Verificar Se Mapa Existe">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>class=leaflet-container</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-19T17:40:39.826152" elapsed="1.064999"/>
+<status status="PASS" start="2025-11-21T09:52:09.175728" elapsed="1.059512"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-19T17:40:40.891379" level="INFO">O mapa foi carregado corretamente.</msg>
+<msg time="2025-11-21T09:52:10.235474" level="INFO">O mapa foi carregado corretamente.</msg>
 <arg>O mapa foi carregado corretamente.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-19T17:40:40.891284" elapsed="0.000126"/>
+<status status="PASS" start="2025-11-21T09:52:10.235376" elapsed="0.000127"/>
 </kw>
-<status status="PASS" start="2025-11-19T17:40:39.825990" elapsed="1.065462"/>
+<status status="PASS" start="2025-11-21T09:52:09.175569" elapsed="1.059972"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-11-19T17:40:40.891978" elapsed="2.578481"/>
+<status status="PASS" start="2025-11-21T09:52:10.235759" elapsed="2.570131"/>
 </kw>
 <doc>Testa o fluxo principal de login e carregamento da home.</doc>
-<status status="PASS" start="2025-11-19T17:40:28.434740" elapsed="15.035886"/>
+<status status="PASS" start="2025-11-21T09:51:58.457096" elapsed="14.348934"/>
 </test>
-<status status="PASS" start="2025-11-19T17:40:28.209190" elapsed="15.261959"/>
+<status status="PASS" start="2025-11-21T09:51:58.205108" elapsed="14.601471"/>
 </suite>
 <statistics>
 <total>

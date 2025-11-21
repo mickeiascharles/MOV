@@ -5,10 +5,11 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
 
-  // 1. ADICIONE ESTA CONFIGURAÇÃO
+  base: "/MOV/",
+
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: "./src/setupTests.js", // (Vamos criar este arquivo)
+    setupFiles: "./src/setupTests.js",
   },
 });
