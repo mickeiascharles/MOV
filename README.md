@@ -131,9 +131,10 @@ Se você executar o script `seed.js` no backend:
 | **SuperAdmin** | `superadmin@mov.com` | `super123` |
 
 <div>   
-  <a href="hhttps://mickeiascharles.github.io/MOV/">
+  <a href="https://mickeiascharles.github.io/MOV/">
     Hospedagem
   </div>
+      
 <div>   
   <a href="https://mov-production.up.railway.app/api">
     API
