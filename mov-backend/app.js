@@ -14,26 +14,34 @@ import rotasDashboard from "./routes/dashboard.js";
 
 const app = express();
 
+// --- CONFIGURAÇÃO EXPLÍCITA E ROBUSTA DO CORS ---
 const allowedOrigins = [
-  "https://mickeiascharles.github.io",
-  "https://mov-backend-ex6e.onrender.com",
+  "https://mickeiascharles.github.io", // Seu Frontend (Origem)
+  "https://mov-backend-ex6e.onrender.com", // Seu Backend (Self-Origin)
 ];
 
 const corsOptions = {
+  // Função que checa a origem dinamicamente
   origin: function (origin, callback) {
+    // Permite requisições de origens permitidas OU requisições sem origem (como local/Postman)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
+      // Retorna erro CORS se a origem não for permitida
       callback(new Error("CORS: Acesso negado pela origem " + origin));
     }
   },
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
+  // REMOVIDO: credentials: true para resolver o conflito CORS/Render
 };
 
+// Aplica a regra de CORS a todas as requisições
 app.use(cors(corsOptions));
 
+// OBRIGATÓRIO: Responde à requisição OPTIONS (Preflight)
 app.options("*", cors(corsOptions));
+// --- FIM DA CONFIGURAÇÃO CORS ---
 
 app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
