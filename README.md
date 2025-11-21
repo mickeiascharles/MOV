@@ -14,17 +14,17 @@ O objetivo principal foi criar um painel de controle robusto, seguro e reativo, 
 
 ## Funcionalidades e Regras de Negócio
 
-* **Autenticação (Login & RBAC):** Login seguro com `bcrypt` e gerenciamento de permissões baseado em funções (Role-Based Access Control - RBAC).
-* **Permissões e Acessos:** A visibilidade das telas é definida pela função do usuário:
-    * **Admin/SuperAdmin:** Acesso total (Gestão de Usuários, Bueiros, Manutenções e Eventos).
-    * **GestorManutencao:** Acesso a Agendamentos e Visualização de Eventos.
-    * **GestorBueiros:** Acesso a Cadastro de Bueiros e Visualização de Eventos.
-* **Gestão de Ativos (CRUD):** Cadastro, visualização no mapa e exclusão de bueiros (que também remove os eventos relacionados via backend).
-* **Dashboards de Incidentes:**
-    * **Alertas:** Exibe os eventos mais recentes (Violação em Vermelho, Manutenção em Laranja).
-    * **Lógica de Prioridade:** O backend calcula a prioridade do alerta (`Alta`, `Média`, `Baixa`) com base no tempo decorrido desde a ocorrência.
-* **Visualização Geográfica:** Mapas interativos (Leaflet) para plotar a localização exata dos bueiros e modais para ver detalhes e histórico de eventos por local.
-* **Upload de Foto:** Sistema de upload de foto de perfil com `multer` e atualização imediata no Contexto React.
+- **Autenticação (Login & RBAC):** Login seguro com `bcrypt` e gerenciamento de permissões baseado em funções (Role-Based Access Control - RBAC).
+- **Permissões e Acessos:** A visibilidade das telas é definida pela função do usuário:
+  - **Admin/SuperAdmin:** Acesso total (Gestão de Usuários, Bueiros, Manutenções e Eventos).
+  - **GestorManutencao:** Acesso a Agendamentos e Visualização de Eventos.
+  - **GestorBueiros:** Acesso a Cadastro de Bueiros e Visualização de Eventos.
+- **Gestão de Ativos (CRUD):** Cadastro, visualização no mapa e exclusão de bueiros (que também remove os eventos relacionados via backend).
+- **Dashboards de Incidentes:**
+  - **Alertas:** Exibe os eventos mais recentes (Violação em Vermelho, Manutenção em Laranja).
+  - **Lógica de Prioridade:** O backend calcula a prioridade do alerta (`Alta`, `Média`, `Baixa`) com base no tempo decorrido desde a ocorrência.
+- **Visualização Geográfica:** Mapas interativos (Leaflet) para plotar a localização exata dos bueiros e modais para ver detalhes e histórico de eventos por local.
+- **Upload de Foto:** Sistema de upload de foto de perfil com `multer` e atualização imediata no Contexto React.
 
 ---
 
@@ -34,23 +34,23 @@ O projeto é construído sobre uma arquitetura modular de **Cliente-Servidor (Fr
 
 ### Backend (Servidor) - `mov-backend/`
 
-| Tecnologia | Função |
-| :--- | :--- |
-| **Node.js** com **Express.js** | Criação da API RESTful e lógica de Controllers. |
-| **MySQL** (via `mysql2/promise`) | Banco de dados relacional para armazenar dados persistentes. |
-| **`bcryptjs`** | Criptografia segura de senhas de usuários. |
-| **`multer`** | Middleware para tratamento de upload de arquivos (fotos de perfil). |
-| **`Vitest`** e **`Supertest`** | Ferramentas de desenvolvimento e testes unitários. |
+| Tecnologia                       | Função                                                              |
+| :------------------------------- | :------------------------------------------------------------------ |
+| **Node.js** com **Express.js**   | Criação da API RESTful e lógica de Controllers.                     |
+| **MySQL** (via `mysql2/promise`) | Banco de dados relacional para armazenar dados persistentes.        |
+| **`bcryptjs`**                   | Criptografia segura de senhas de usuários.                          |
+| **`multer`**                     | Middleware para tratamento de upload de arquivos (fotos de perfil). |
+| **`Vitest`** e **`Supertest`**   | Ferramentas de desenvolvimento e testes unitários.                  |
 
 ### Frontend (Cliente) - `mov-frontend/src`
 
-| Tecnologia | Função |
-| :--- | :--- |
-| **React** (com **Vite**) | Interface de Usuário rápida e reativa. |
-| **React Router DOM** | Gerenciamento de rotas e rotas protegidas (Protected Routes). |
-| **Context API** | Gerenciamento de estado global (Autenticação/Usuário Logado). |
-| **`react-leaflet`** / **`chart.js`** | Mapas geográficos e visualização de dados (gráficos). |
-| **`Axios`** | Cliente HTTP para comunicação com a API do Backend. |
+| Tecnologia                           | Função                                                        |
+| :----------------------------------- | :------------------------------------------------------------ |
+| **React** (com **Vite**)             | Interface de Usuário rápida e reativa.                        |
+| **React Router DOM**                 | Gerenciamento de rotas e rotas protegidas (Protected Routes). |
+| **Context API**                      | Gerenciamento de estado global (Autenticação/Usuário Logado). |
+| **`react-leaflet`** / **`chart.js`** | Mapas geográficos e visualização de dados (gráficos).         |
+| **`Axios`**                          | Cliente HTTP para comunicação com a API do Backend.           |
 
 <div>
     <img height="35cm" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo"/>
@@ -69,8 +69,9 @@ O projeto é construído sobre uma arquitetura modular de **Cliente-Servidor (Fr
 O projeto é configurado em um ambiente de monorepo local. Certifique-se de estar na pasta principal (`MOV/`).
 
 ### Pré-requisitos
-* **Node.js (v18+):** Necessário para rodar os servidores.
-* **MySQL Server:** Um servidor MySQL rodando localmente (WAMP/XAMPP/Docker).
+
+- **Node.js (v18+):** Necessário para rodar os servidores.
+- **MySQL Server:** Um servidor MySQL rodando localmente (WAMP/XAMPP/Docker).
 
 ### 1. Configurar o Banco de Dados
 
@@ -130,6 +131,10 @@ Se você executar o script `seed.js` no backend:
 | **SuperAdmin** | `superadmin@mov.com` | `super123` |
 
 <div>   
-  <a href="https://mov-pied.vercel.app/login">
+  <a href="hhttps://mickeiascharles.github.io/MOV/">
     Hospedagem
+  </div>
+<div>   
+  <a href="https://mov-production.up.railway.app/api">
+    API
   </div>
